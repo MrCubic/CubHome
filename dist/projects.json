@@ -1,0 +1,50 @@
+[
+    {
+        "picturePath": "/img/DropBot.png",
+        "title": "DropBot",
+        "year": "Nov 2021 - Jan 2022",
+        "usedTechs": ["C#", "Discord.net", ".NET Core", "Game Theory"],
+        "description": "DropBot is a Discord bot for a collecting card game of my own creation. It allows players to collect, upgrade and trade cards with each other. It's currently being used on a daily basis by a group of friends.",
+        "link": null
+    },
+    {
+        "picturePath": "/img/EcoSync.png",
+        "title": "EcoSync",
+        "year": "Feb 2024 - Dec 2024",
+        "usedTechs": ["TypeScript", "React Native", "Three.JS", ".NET Core", "Docker", "Postgres"],
+        "description": "EcoSync is a mobile application that helps users track their carbon footprint and provides them with tips on how to reduce it. It's one of my biggest project as it lasts one year and covers every steps of creation for an app, from the conception to the advertising.",
+        "link": "https://ecosync.framer.website/"
+    },
+    {
+        "picturePath": "/img/ElephantVision.png",
+        "title": "ElephantVision",
+        "year": "Jun 2024 - Feb 2025",
+        "usedTechs": ["Swift", "VisionOS", "OCR", "AI", "UX/UI", "PoC"],
+        "description": "ElephantVision is a project given by a company during our final year at school. The goal is to develop a version of their product tailored for the Apple Vision Pro. It's gonna be used by the company as a showcase for their product.",
+        "link": null
+    },
+    {
+        "picturePath": "/img/Lyrix.png",
+        "title": "Lyrix",
+        "year": "April 2024",
+        "usedTechs": ["Angular", "API", "UX/UI", "TypeScript", "HTML/CSS"],
+        "description": "Lyrix is a small website game, inspired by the many daily word games that can be found on the internet. The goal is to find a song title from the lyrics, word by word, uncovering them after each attempt of the player.",
+        "link": "https://lyrix-elise-baturone-6a69304a95efeaf57f761f96194bf75b7fd455e6a8.pages.epita.fr/home"
+    },
+    {
+        "picturePath": "/img/Ertranked.png",
+        "title": "Ertranked",
+        "year": "Mai 2024",
+        "usedTechs": ["C#", ".NET Core", "Razor Pages", "Docker", "SQL Server"],
+        "description": "Ertranked is a reworked version of DropBot, ported to a webapp in RazorPages. It was fully rebuilt, from the UI/UX to the data structures, but we managed to keep the essence of DropBot.",
+        "link": null
+    },
+    {
+        "picturePath": "/img/Blender.png",
+        "title": "Blender Projects",
+        "year": "since 2021",
+        "usedTechs": ["3D", "Modeling", "Texturing", "Animation", "Rendering"],
+        "description": "I've been using Blender to learn 3D modeling as a hobby. I've created a few scenes and models along the years to hone my skills. It helped me grasp a solid understanding of 3D modeling, lighting, and rendering.",
+        "link": null
+    }
+]
