@@ -158,7 +158,7 @@ function init() {
   //add a frosted window
   const geometry = new THREE.BoxGeometry(0.01, 1.175, 3.25);
   const texture = new THREE.TextureLoader();
-  const normalMapTexture = texture.load('./rainNormals.png');
+  const normalMapTexture = texture.load('./rainNormals.jpg');
   normalMapTexture.wrapS = THREE.RepeatWrapping;
   normalMapTexture.wrapT = THREE.RepeatWrapping;
   const material = new THREE.MeshPhysicalMaterial({ 
@@ -627,7 +627,7 @@ function hideAllDisks() {
 function setProjectData(projectId) {
       const project = projectData[projectId];
       document.getElementById('project-title').innerText = project.title;
-      document.getElementById('project-image').src = project.picturePath;
+      document.getElementById('project-image').src = "/CubHome/" + project.picturePath;
       document.getElementById('project-year').innerText = project.year;
 
       // hide all disks
