@@ -6,16 +6,16 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const scene = new THREE.Scene();
 
 // Audio
-const clickSound = new Audio('public/sounds/mouseClick.mp3');
+const clickSound = new Audio('/sounds/mouseClick.mp3');
 clickSound.volume = 0.3;
-const cardboard = new Audio('public/sounds/cardboard.mp3');
+const cardboard = new Audio('/sounds/cardboard.mp3');
 cardboard.volume = 0.3;
 
 let projectData;
 let projectId = 0;
 fetchProjectData();
 
-const backgroundMusic = new Audio('public/sounds/rainBG.mp3');
+const backgroundMusic = new Audio('/sounds/rainBG.mp3');
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.1;
 
@@ -41,7 +41,7 @@ function init() {
 
   // Loader
   const loader = new GLTFLoader();
-  loader.load('public/models/HubPortfolioBaked.glb', (gltf) => {
+  loader.load('/models/HubPortfolioBaked.glb', (gltf) => {
       const model = gltf.scene;
       model.traverse((child) => {
           if (child.isMesh) {
@@ -148,17 +148,17 @@ function init() {
   }
 
 
-  addDisk('public/models/DropBot.glb');
-  addDisk('public/models/Blender Projects.glb');
-  addDisk('public/models/EcoSync.glb');
-  addDisk('public/models/ElephantVision.glb');
-  addDisk('public/models/Ertranked.glb');
-  addDisk('public/models/Lyrix.glb');
+  addDisk('/models/DropBot.glb');
+  addDisk('/models/Blender Projects.glb');
+  addDisk('/models/EcoSync.glb');
+  addDisk('/models/ElephantVision.glb');
+  addDisk('/models/Ertranked.glb');
+  addDisk('/models/Lyrix.glb');
 
   //add a frosted window
   const geometry = new THREE.BoxGeometry(0.01, 1.175, 3.25);
   const texture = new THREE.TextureLoader();
-  const normalMapTexture = texture.load('public/rainNormals.png');
+  const normalMapTexture = texture.load('/rainNormals.png');
   normalMapTexture.wrapS = THREE.RepeatWrapping;
   normalMapTexture.wrapT = THREE.RepeatWrapping;
   const material = new THREE.MeshPhysicalMaterial({ 
@@ -610,7 +610,7 @@ document.addEventListener('contextmenu', (event) => {
 });
 
 function fetchProjectData() { 
-  fetch('public/projects.json')
+  fetch('/projects.json')
     .then(response => response.json())
     .then(data => projectData = data);
 }
