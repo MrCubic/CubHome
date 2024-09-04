@@ -34,7 +34,7 @@
     {
         "picturePath": "/img/Ertranked.png",
         "title": "Ertranked",
-        "year": "Mai 2024",
+        "year": "May 2024",
         "usedTechs": ["C#", ".NET Core", "Razor Pages", "Docker", "SQL Server"],
         "description": "Ertranked is a reworked version of DropBot, ported to a webapp in RazorPages. It was fully rebuilt, from the UI/UX to the data structures, but we managed to keep the essence of DropBot.",
         "link": null
