@@ -178,11 +178,11 @@ function init() {
   // ########################################
 
   // material & geometry for the trigger hints
-  const triggerHintGeometry = new THREE.SphereGeometry(0.031, 15);
+  const triggerHintGeometry = new THREE.SphereGeometry(0.05, 15);
   const triggerHintMaterial = new THREE.MeshPhysicalMaterial({ 
     color: 0xffffff,
     transparent: true,
-    opacity: 0.7,
+    opacity: 1,
     emissive: 0xffffff,
   });
 
@@ -296,7 +296,6 @@ function init() {
 
   // Handle click event
   function onClick(event) {
-    event.preventDefault();
 
     // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -434,14 +433,14 @@ function init() {
   function animate() {
       requestAnimationFrame(animate);
       //animate a breathing effect on the hints
-      ZoomCVTriggerHint.scale.set(1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400));
-      ZoomCreditsTriggerHint.scale.set(1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400));
-      ZoomProject01TriggerHint.scale.set(1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400));
-      ZoomProject02TriggerHint.scale.set(1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400));
-      ZoomProject03TriggerHint.scale.set(1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400));
-      ZoomProject04TriggerHint.scale.set(1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400));
-      ZoomProject05TriggerHint.scale.set(1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400), 1 + 0.2 * Math.sin(performance.now() / 400));
-      ZoomProject06TriggerHint.scale.set(1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400), 1 + 0.2 * Math.cos(performance.now() / 400));
+      ZoomCVTriggerHint.scale.set(1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400));
+      ZoomCreditsTriggerHint.scale.set(1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400));
+      ZoomProject01TriggerHint.scale.set(1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400));
+      ZoomProject02TriggerHint.scale.set(1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400));
+      ZoomProject03TriggerHint.scale.set(1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400));
+      ZoomProject04TriggerHint.scale.set(1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400));
+      ZoomProject05TriggerHint.scale.set(1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400), 1 + 0.3 * Math.sin(performance.now() / 400));
+      ZoomProject06TriggerHint.scale.set(1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400), 1 + 0.3 * Math.cos(performance.now() / 400));
 
       // zoom on the CV
       if (moveCameraToCV) {
@@ -527,14 +526,14 @@ function init() {
         if (lerpFactor >= 1) {
           moveCameraToOrigin = false;
           controls.enabled = true;
-          ZoomCVTriggerHint.material.opacity = 0.7;
-          ZoomCreditsTriggerHint.material.opacity = 0.7;
-          ZoomProject01TriggerHint.material.opacity = 0.7;
-          ZoomProject02TriggerHint.material.opacity = 0.7;
-          ZoomProject03TriggerHint.material.opacity = 0.7;
-          ZoomProject04TriggerHint.material.opacity = 0.7;
-          ZoomProject05TriggerHint.material.opacity = 0.7;
-          ZoomProject06TriggerHint.material.opacity = 0.7;
+          ZoomCVTriggerHint.material.opacity = 1;
+          ZoomCreditsTriggerHint.material.opacity = 1;
+          ZoomProject01TriggerHint.material.opacity = 1;
+          ZoomProject02TriggerHint.material.opacity = 1;
+          ZoomProject03TriggerHint.material.opacity = 1;
+          ZoomProject04TriggerHint.material.opacity = 1;
+          ZoomProject05TriggerHint.material.opacity = 1;
+          ZoomProject06TriggerHint.material.opacity = 1;
           ZoomCVTrigger.scale.set(1, 1, 1);
           ZoomCreditsTrigger.scale.set(1, 1, 1);
           ZoomProject01Trigger.scale.set(1, 1, 1);

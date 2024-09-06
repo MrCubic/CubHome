@@ -17,7 +17,7 @@
 			<div id="progress-bar" style="display: none;">
 				<div id="progress-bar-fill"></div>
 			</div>			
-			<div style="margin-top: 50px">for an optimal experience, Chrome is recommended.</div>
+			<div style="margin-top: 50px">If viewing this on mobile, portrait mode is recommended.</div>
 		</div>
 		<div class="hudLeft" id="hudL" style="display: flex;">
 			<button class="button" id="mute-button">
@@ -70,7 +70,7 @@
 							<div class="text description" id="project-description">Description</div>
 						</div>
 						<div style="display: flex; justify-content: end; height: 50px; flex-direction: column">
-							<a href="#" class="text button seeMore" id="project-link"><b>See more</b></a>
+							<a href="#" class="text button seeMore" id="project-link" target="_blank"><b>See more</b></a>
 						</div>
 					</div>
 				</div>
@@ -101,6 +101,20 @@
 		user-select: none;
     }
 
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #3e311e;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #ffffff00;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #968f83;
+	}
+
 	.button {
 		background: #d0c6b6;
 		color: #3e311e;
@@ -130,7 +144,7 @@
 	}
 
 	.start-button {
-		font-size: 32px;  
+		font-size: 2em;  
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
@@ -152,13 +166,13 @@
 	}
 	
 	.tutorial-text {
-		font-size: 18px;
+		font-size: 2em;
 		font-family: "Architects Daughter", cursive;
 		color:#3e311e;
 	}
 
 	.text {
-		font-size: 24px;
+		font-size: 2em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
@@ -194,7 +208,7 @@
 		width: 0%;
     }
 	.loading-title {
-		font-size: 32px;
+		font-size: 2.2em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
@@ -251,10 +265,10 @@
 
 	.hudProjects {
 		position: fixed;
-		top: 15%;
 		left: 10%;
 		right: 15%;
 		bottom: 20px;
+		height: fit-content;
 		display: none;
 		flex-direction: row;
 		justify-content: space-around;
@@ -310,14 +324,14 @@
 	}
 
 	.title {
-		font-size: 42px;
+		font-size: 2.7em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
 		color: #3e311e;
 	}
 	.years {
-		font-size: 24px;
+		font-size: 1.6em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
@@ -331,7 +345,6 @@
 		flex-direction: column;
 		justify-content: start;
 		align-items: start;
-		border-right: 2px solid #3e311e;
 	}
 
 	.rightPane {
@@ -343,19 +356,22 @@
 		justify-content: start;
 		align-items: end;
 		margin: 20px;
+		padding-left: 20px;
+		border-left: 2px solid #3e311e;
 	}
 
 	.descrBox {
 		border-radius: 10px;
 		margin-bottom: 20px;
 		width: 100%;
-		height: 75%;
+		height: 12em;
+		overflow-y: scroll;
 		border: 1px solid #968f83;
 		background-color: #d0c6b6;
 	}
 
 	.description {
-		font-size: 20px;
+		font-size: 1.2em;
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -363,10 +379,11 @@
 		margin-top: 10px;
 		margin-left: 20px;
 		margin-right: 20px;
+		margin-bottom: 30px;
 	}
 
 	.tech {
-		font-size: 18px;
+		font-size: 1.2em;
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -377,7 +394,7 @@
 	}
 
 	.seeMore {
-		font-size: 18px;
+		font-size: 1em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
@@ -390,7 +407,7 @@
 	}
 
 	.prefix {
-		font-size: 32px;
+		font-size: 1.8em;
 		font-family: "Architects Daughter", cursive;
 		font-weight: 400;
 		font-style: normal;
