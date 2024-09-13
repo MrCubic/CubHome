@@ -626,7 +626,7 @@ function hideAllDisks() {
 function setProjectData(projectId) {
       const project = projectData[projectId];
       document.getElementById('project-title').innerText = project.title;
-      document.getElementById('project-image').src = "/CubHome/" + project.picturePath;
+      document.getElementById('project-image').src =  project.picturePath;
       document.getElementById('project-year').innerText = project.year;
 
       // hide all disks
