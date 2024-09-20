@@ -17,7 +17,7 @@ fetchProjectData();
 
 const backgroundMusic = new Audio('./sounds/rainBG.mp3');
 backgroundMusic.loop = true;
-backgroundMusic.volume = 0.1;
+backgroundMusic.volume = 0.3;
 
 function init() {
   // Renderer
